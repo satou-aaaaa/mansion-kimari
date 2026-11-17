@@ -1,4 +1,4 @@
-// SNS で貼られたときの絵（og.png 1200×630）を作る。今日の問題（答え）は入れず、遊び方の例だけ（規約を変える決議は？）。
+// SNS で貼られたときの絵（og.png 1200×630）を作る。今日の問題（答え）は入れず、遊び方の見本だけ（問題データにない言い方で、正解の印も付けない。CodeRabbit mansion-kimari#1）。
 // 使い方: node tools/make-og.cjs（qa/ の playwright を使う）
 const path = require("path");
 const { chromium } = require(path.join(__dirname, "..", "qa", "node_modules", "playwright"));
@@ -15,8 +15,8 @@ const K = require(path.join(__dirname, "..", "data.js"));
       <div style="font-size:36px;margin-top:14px">その決め方<br>どれ？</div>
     </div>
     <div style="flex:1;background:#fffdf7;border:4px solid #1d2a3f;border-radius:8px;overflow:hidden">
-      <div style="font-size:30px;font-weight:700;padding:22px 20px 6px">〰 管理規約をつくる・変える・なくす決議（出席した人の）。　どれ？</div>
-      <div style="display:flex;flex-direction:column;gap:10px;padding:16px">${line("過半数")}${line("4分の3", 1)}${line("全員")}</div>
+      <div style="font-size:30px;font-weight:700;padding:22px 20px 6px">〰 マンションの場面を読んで、決め方や期限を選ぶ。</div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:16px">${line("過半数？")}${line("4分の3？")}${line("全員？")}</div>
     </div>
   </div></body>`);
   await p.screenshot({ path: path.join(__dirname, "..", "og.png") });
